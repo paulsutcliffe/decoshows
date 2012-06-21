@@ -1,4 +1,7 @@
+<% if current_user %>
 <p id="notice"><%= notice %></p>
+<h2>Agregar una nueva foto</h2>
+<h5><%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete %></h5>
   <%= form_for(:foto, :url => album_fotos_url(@album), :html => { :multipart => true }) do |f| %>
     <div class="field">
       <%= f.label :foto, "Foto" %><br />
@@ -8,9 +11,9 @@
       <%= f.submit "Guardar" %>
     </div>
   <% end %>
+<% end %>
 <p>
-  <b>Nombre:</b>
-  <%= @album.nombre %>
+  <h1><%= @album.nombre %></h1>
 </p>
 
 <ul>
@@ -18,12 +21,17 @@
   <% @album.fotos.each do |foto| %>
     <li class="<%= cycle('break', '', '', '', 'last') %>">
       <%= image_tag(foto.foto(:thumb)) %>
+      <% if current_user %>
+      <br />
       <%= link_to 'Eliminar', album_foto_url(@album, foto), :confirm => '¿Estás seguro?', :method => :delete %>
+      <% end %>
   </li>
   <% end %>
 <% end %>
 </ul>
 <div class="controles">
+<% if current_user %>
 <%= link_to 'Cambiar nombre al álbum', edit_album_path(@album), :class => 'btn rename' %> |
+<% end %>
 <%= link_to 'Volver', albumes_path, :class => 'btn back' %>
 </div>

@@ -16,6 +16,7 @@ gem "paper_trail"
 gem "metamagic"
 gem "dynamic_sitemaps"
 gem "friendly_id", "~>4.0.0.beta14"
+gem "devise"
 
 gem "nifty-generators"
 gem "therubyracer"
