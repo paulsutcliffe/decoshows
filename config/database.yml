@@ -34,9 +34,10 @@ production:
   reconnect: false
   database: decoshows_production
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  host: decoshowsdb.decoshows.com
+  username: decoshowsdb
+  password: chimpance99
+#  socket: /tmp/mysql.sock
 
 cucumber:
   <<: *test
