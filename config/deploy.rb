@@ -1,7 +1,7 @@
-#require "bundler/capistrano"
+require "bundler/capistrano"
 
-#default_environment['PATH']='/usr/lib/ruby/gems/1.8/bin:/home/decoshowsrails/.gems/bin:/usr/local/bin:/usr/bin:/bin'
-#default_environment['GEM_PATH']='/home/decoshowsrails/.gems:/usr/lib/ruby/gems/1.8'
+default_environment['PATH']='/usr/lib/ruby/gems/1.8/bin:/home/galeriadecoshows/.gems/bin:/usr/local/bin:/usr/bin:/bin'
+default_environment['GEM_PATH']='/home/galeriadecoshows/.gems:/usr/lib/ruby/gems/1.8'
 
 set :user, "galeriadecoshows"
 set :domain, "yorkville.dreamhost.com"

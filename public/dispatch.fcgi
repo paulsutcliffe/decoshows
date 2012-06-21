@@ -5,7 +5,7 @@ require 'fcgi'
 
 ENV['RAILS_ENV'] ||= 'production'
 
-ENV['GEM_HOME'] ||= '/home/decoshowsrails/.gems'
+ENV['GEM_HOME'] ||= '/home/galeriadecoshows/.gems'
 require 'rubygems'
 Gem.clear_paths
 
