@@ -4,7 +4,7 @@ default_environment['PATH']='/usr/lib/ruby/gems/1.8/bin:/home/decoshowsrails/.ge
 default_environment['GEM_PATH']='/home/decoshowsrails/.gems:/usr/lib/ruby/gems/1.8'
 
 set :user, "decoshowsrails"
-set :domain, "fotos.decoshowsrails.com"
+set :domain, "fotos.decoshows.com"
 set :project, "decoshowsrails"
 set :application, "decoshowsrails"
 set :applicationdir, "/home/decoshowsrails/fotosdecoshows"
