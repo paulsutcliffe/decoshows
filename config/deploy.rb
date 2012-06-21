@@ -28,5 +28,5 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 set :use_sudo, false
 
 after 'deploy:create_symlink' do
-  run "chmod 775 fotosdecoshows/current/public/dispatch.fcgi"
+  run "chmod 775 #{applicationdir}/current/public/dispatch.fcgi"
 end
