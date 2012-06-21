@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+  <%= form_for(:foto, :url => album_fotos_url(@album), :html => { :multipart => true }) do |f| %>
+    <div class="field">
+      <%= f.label :foto, "Foto" %><br />
+      <%= f.file_field :foto %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Guardar" %>
+    </div>
+  <% end %>
+<p>
+  <b>Nombre:</b>
+  <%= @album.nombre %>
+</p>
+
+
+<% if @album.fotos %>
+  <% @album.fotos.each do |foto| %>
+    <li>
+      <%= image_tag(foto.foto(:thumb)) %>
+      <%= link_to 'Eliminar', album_foto_url(@album, foto), :confirm => '¿Estás seguro?', :method => :delete %>
+  </li>
+  <% end %>
+<% end %>
+
+<%= link_to 'Cambiar nombre al álbum', edit_album_path(@album) %> |
+<%= link_to 'Volver', albumes_path %>

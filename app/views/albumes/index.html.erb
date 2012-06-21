@@ -1,0 +1,46 @@
+<h1>Crear un nuevo álbum</h1>
+
+<p id="notice"><%= notice %></p>
+
+<%= form_for @album, :url => {:action => 'create'}  do |f| %>
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre, "Nombre" %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Crear Álbum" %>
+  </div>
+<% end %>
+
+
+
+
+<h1>Listing albumes</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @albumes.each do |album| %>
+  <tr>
+    <td><%= link_to album.nombre, album %></td>
+    <td><%= link_to 'Cambiar nombre', edit_album_path(album) %></td>
+    <td><%= link_to 'Eliminar álbum', album, :confirm => '¿Estás seguro? Se borraran todas las fotos que están en álbum', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
