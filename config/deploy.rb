@@ -3,11 +3,11 @@ require "bundler/capistrano"
 default_environment['PATH']='/usr/lib/ruby/gems/1.8/bin:/home/decoshowsrails/.gems/bin:/usr/local/bin:/usr/bin:/bin'
 default_environment['GEM_PATH']='/home/decoshowsrails/.gems:/usr/lib/ruby/gems/1.8'
 
-set :user, "decoshowsrails"
+set :user, "galeriadecoshows"
 set :domain, "yorkville.dreamhost.com"
-set :project, "decoshowsrails"
-set :application, "decoshowsrails"
-set :applicationdir, "/home/#{user}/#{application}"
+set :project, "decoshows"
+set :application, "decoshows"
+set :applicationdir, "/home/#{user}/#{user}"
 set :repository,  "git@github.com:paulsutcliffe/decoshows.git"
 default_run_options[:pty] = true
 
