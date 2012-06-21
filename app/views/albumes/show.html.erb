@@ -13,15 +13,17 @@
   <%= @album.nombre %>
 </p>
 
-
+<ul>
 <% if @album.fotos %>
   <% @album.fotos.each do |foto| %>
-    <li>
+    <li class="<%= cycle('break', '', '', '', 'last') %>">
       <%= image_tag(foto.foto(:thumb)) %>
       <%= link_to 'Eliminar', album_foto_url(@album, foto), :confirm => '¿Estás seguro?', :method => :delete %>
   </li>
   <% end %>
 <% end %>
-
-<%= link_to 'Cambiar nombre al álbum', edit_album_path(@album) %> |
-<%= link_to 'Volver', albumes_path %>
+</ul>
+<div class="controles">
+<%= link_to 'Cambiar nombre al álbum', edit_album_path(@album), :class => 'btn rename' %> |
+<%= link_to 'Volver', albumes_path, :class => 'btn back' %>
+</div>

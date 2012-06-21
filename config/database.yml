@@ -12,7 +12,7 @@ development:
   database: decoshows_development
   pool: 5
   username: root
-  password:
+  password: 
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and

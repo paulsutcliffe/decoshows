@@ -54,3 +54,9 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+#decoshow-iframe ul{float:left; clear:left; margin:0; padding:0}
+#decoshow-iframe li{float:left; list-style:none; margin:0 10px 10px 0}
+#decoshow-iframe li.break{float:left; clear:left}
+#decoshow-iframe li.last{margin-right:0}
+.controles{float:left; clear:left}
