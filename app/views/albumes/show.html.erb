@@ -1,3 +1,13 @@
+<% content_for :javascript do %>
+  <%= stylesheet_link_tag '/javascripts/libs/lightbox/themes/white-green/jquery.lightbox.css' %>
+  <%= javascript_include_tag '/javascripts/libs/lightbox/jquery.lightbox.min.js' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      jQuery('.lightbox').lightbox();
+    })
+  </script>
+<% end %>
+
 <% if current_user %>
 <p id="notice"><%= notice %></p>
 <h2>Agregar una nueva foto</h2>
@@ -20,7 +30,7 @@
 <% if @album.fotos %>
   <% @album.fotos.each do |foto| %>
     <li class="<%= cycle('break', '', '', '', 'last') %>">
-      <%= image_tag(foto.foto(:thumb)) %>
+      <%= link_to image_tag(foto.foto(:thumb)), foto.foto(:regular), :class => 'lightbox', :rel => 'gallery' %>
       <% if current_user %>
       <br />
       <%= link_to 'Eliminar', album_foto_url(@album, foto), :confirm => '¿Estás seguro?', :method => :delete %>
