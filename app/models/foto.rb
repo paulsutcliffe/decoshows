@@ -5,6 +5,6 @@ class Foto < ActiveRecord::Base
   validates_attachment_size :foto, :less_than => 4.megabytes
   validates_attachment_presence :foto
   has_attached_file :foto, :styles => { :thumb => ["211x138#", :jpg], :regular => ["900x598>", :jpg] },
-                            :url  => "/images/assets/fotos/:id/:style/:basename.:extension",
-                            :path => ":rails_root/public/images/assets/fotos/:id/:style/:basename.:extension"
+                            :url  => "/system/assets/fotos/:id/:style/:basename.:extension",
+                            :path => ":rails_root/public/system/assets/fotos/:id/:style/:basename.:extension"
 end
