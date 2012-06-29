@@ -30,7 +30,7 @@
 <ul>
 <% if @albumes.any? %>	
 <% @albumes.each do |album| %>
-  <li class="<%= cycle('break', '', '', '', 'last') %>">
+  <li class="<%= cycle('break', '', '', 'last') %>">
 	<% if album.fotos.any? %>
 	<%= link_to truncate(album.nombre, :length => 32), album %>
 	<br />

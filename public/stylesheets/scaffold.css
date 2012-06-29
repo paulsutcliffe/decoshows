@@ -59,4 +59,5 @@ div.field, div.actions {
 #decoshow-iframe li{float:left; list-style:none; margin:0 10px 10px 0}
 #decoshow-iframe li.break{float:left; clear:left}
 #decoshow-iframe li.last{margin-right:0}
+#decoshow-iframe ul li img{width:200px}
 .controles{float:left; clear:left}
