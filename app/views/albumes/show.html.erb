@@ -29,7 +29,7 @@
 <ul>
 <% if @album.fotos %>
   <% @album.fotos.each do |foto| %>
-    <li class="<%= cycle('break', '', '', '', 'last') %>">
+    <li class="<%= cycle('break', '', '', 'last') %>">
       <%= link_to image_tag(foto.foto(:thumb)), foto.foto(:regular), :class => 'lightbox', :rel => 'gallery' %>
       <% if current_user %>
       <br />
